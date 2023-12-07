@@ -16,9 +16,9 @@ NAME = 'h-tool-library'
 DESCRIPTION = 'python common tool library.'
 URL = 'https://github.com/huyu456/h-tool-library'
 EMAIL = 'huyu0215@gamil.com'
-AUTHOR = 'hu yu'
+AUTHOR = 'huyu'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
