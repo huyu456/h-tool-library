@@ -14,20 +14,22 @@ def md5_(s: str) -> str:
     return hashlib.md5(s.encode(encoding='UTF-8')).hexdigest()
 
 
-def password_encry(password: str) -> str:
+def password_encry(password: str, method: str = "scrypt", salt_length: int = 16) -> str:
     """
         对密码进行sha256 加密
+    :param salt_length:
+    :param method:
     :param password:
     :return:
     """
-    return generate_password_hash(password)
+    return generate_password_hash(password, method, salt_length)
 
 
-def check_encry_password(password: str, encry_pwd: str):
+def check_encry_password(pwhash: str, password: str):
     """
         对密码进行校验，判断是否是相同密码
+    :param pwhash:
     :param password: 用户传递的密码
-    :param encry_pwd: 加密后的密码
     :return:
     """
-    return check_password_hash(encry_pwd, password)
+    return check_password_hash(pwhash, password)
