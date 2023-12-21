@@ -18,7 +18,7 @@ URL = 'https://github.com/huyu456/h-tool-library'
 EMAIL = 'huyu0215@gamil.com'
 AUTHOR = 'huyu'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.0.3'
+VERSION = '0.0.4'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
