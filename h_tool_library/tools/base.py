@@ -2,14 +2,14 @@
     基础函数
 """
 import base64
-import random
-from io import BytesIO
-from operator import itemgetter
-from itertools import groupby
-from typing import List, Dict, Any
-from collections import Counter
 import os
+import random
 import re
+from collections import Counter
+from io import BytesIO
+from itertools import groupby
+from operator import itemgetter
+from typing import List, Dict, Any
 
 from PIL import Image
 from fake_useragent import UserAgent
@@ -153,3 +153,18 @@ def get_fake_useragent(browsers=None, os_list=None):
         os_list = ["windows", "macos", "linux"]
     ua = UserAgent(browsers=browsers, os=os_list)
     return ua.random
+
+
+def validate_email(email: str):
+    """
+        校验邮箱
+    :param email:
+    :return:
+    """
+    # 定义邮箱正则表达式
+    email_pattern = re.compile(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
+
+    # 使用正则表达式进行匹配
+    if email_pattern.match(email):
+        return True
+    return False
